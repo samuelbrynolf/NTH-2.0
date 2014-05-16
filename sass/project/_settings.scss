@@ -1,0 +1,73 @@
+
+// SETTINGS
+// -> Grid and font settings, variables, mixins and useful css-classes
+//==============================================================================================================
+
+// 1.1 	LAYOUT: MEDIAQUERIES BREAKPOINTS + MAXWIDTH
+// 1.2 	LAYOUT: GRID-GUTTERS
+// 2. 	BODY BASE-TYPE + UNIQUE BODY-SIZE WITHIN EACH MEDIAQUERY
+// 3. 	FONTS
+// 4. 	COLORS (http://colorschemedesigner.com/)
+// 5. 	MISC
+
+//==============================================================================================================
+
+// 1.1 -----------------------------------------------------------------------------------------------------------
+
+$beta_screen:               650;  		    // 650px		(Use as variable: "$beta_query")
+$charlie_screen:						1025; 				// 940px		(Use as variable: "$charlie_query")
+$delta_screen:							1290;					// 1152px		(Use as variable: "$delta_query")
+$echo_screen:								1880;					// 1600px		(Use as variable: "$echo_query")
+$max_width:									680; 		    	// 1780px 	(Use as variable: "$containerwidth")
+
+// 1.2 -----------------------------------------------------------------------------------------------------------
+
+$alpha_gutter:							20; 			// 12px 		(Use as variable: "$gutter_alpha" and "$gutter_alpha_half")
+$beta_gutter:								40; 			// 20px 		(Use as variable: "$gutter_beta" and "$gutter_beta_half")
+$charlie_gutter:  		    	20; 			// 20px 		(Use as variable: "$gutter_charlie" and "$gutter_charlie_half")
+$delta_gutter:  						40; 			// 40px 		(Use as variable: "$gutter_delta" and "$gutter_delta_half")
+$echo_gutter:  							40; 			// 40px 		(Use as variable: "$gutter_echo" and "$gutter_echo_half")
+
+// 2 -----------------------------------------------------------------------------------------------------------
+
+$alpha_bodysize: 						16; 			 //		(Used in mixin ".bodysize()")
+$body_leading: 							22; 			 //		(Use as variable: "$leading")
+
+// -- 
+
+$beta_bodysize:							18; 		
+$charlie_bodysize:		    	16;				
+$delta_bodysize:						18;				
+$echo_bodysize:							18;				
+
+// 3 -----------------------------------------------------------------------------------------------------------
+
+$serif: serif;
+$sans-serif: sans-serif;
+
+$display: sans-serif; 
+$display_italic: sans-serif;
+
+
+// 4 -----------------------------------------------------------------------------------------------------------
+
+$body: 													white;
+$bodycolor: 										#333;
+$link: 													rgb(19,183,195);
+$complementary: 								rgb(253,201,162);
+$subtle:												#ccc;
+
+$bodylighten: 									lighten($body, 5%);
+$linkdarken:										darken($link, 20%);
+
+$bodytransparent:								rgba($body, 0.8);
+
+$gradient_top:									rgb(2,99,113);
+$gradient_33:										rgb(139,222,206);
+$gradient_66:										rgb(225,224,193);
+$gradient_bottom:								$complementary;
+
+// 5 -----------------------------------------------------------------------------------------------------------
+
+$divider-thin:									1px solid;
+$divider-thick:									3px solid;

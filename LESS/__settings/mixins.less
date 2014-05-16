@@ -1,0 +1,79 @@
+// MIXINS & FUNCTIONS
+//==============================================================================================================
+
+.type-to-em( @fontsizepx: @alpha_bodysize, @lineheightpx: @body_leading ) {
+	font-size: @fontsizepx / @alpha_bodysize + 0em;
+	line-height: @lineheightpx / @fontsizepx;
+}
+
+.inner-shadow(@horizontal:0, @vertical:0, @blur:2px, @alpha: 1) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.inner-glow(@horizontal:0, @vertical:0, @blur:1px, @alpha: 1) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(255, 255, 255, @alpha);
+  -moz-box-shadow: inset @horizontal @vertical @blur rgba(255, 255, 255, @alpha);
+  box-shadow: inset @horizontal @vertical @blur rgba(255, 255, 255, @alpha);
+}
+
+.rounded-corners (@radius: 0px) {
+  -webkit-border-radius:  @radius;
+  -moz-border-radius:     @radius;
+  -ms-border-radius:      @radius;
+  -o-border-radius:       @radius;
+  border-radius:          @radius;
+}
+
+.box-shadow (@string) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow:    @string;
+  box-shadow:         @string;
+}
+
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+  text-shadow: @string;
+}
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @stop));
+  background-image: -ms-linear-gradient(bottom,  @start, @stop);
+  background-image: -moz-linear-gradient(center bottom,  @start 0%, @stop 100%);
+  background-image: -o-linear-gradient(@stop, @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+
+.textColumnCount(@count){
+  -webkit-column-count: @count;
+  -moz-column-count: 		@count;
+  column-count: 				@count;
+}
+
+.textColumnGap(@gap){
+  -webkit-column-gap: 	@gap;
+  -moz-column-gap: 			@gap;
+  column-gap: 				@gap;
+}
+
+.textColumnBreak(@when:always){
+	-webkit-column-break-before: @when;
+  -moz-column-break-before: @when;
+  column-break-before: @when;
+}
+
+.transition (@prop: all, @time: 1s, @ease: linear) {
+  -webkit-transition: 	@prop @time @ease;
+  -moz-transition: 			@prop @time @ease;
+  -o-transition: 				@prop @time @ease;
+  -ms-transition: 			@prop @time @ease;
+  transition: 					@prop @time @ease;
+}
+
+.translate(@x:0, @y:0){
+	-webkit-transform: translate(@x,@y);
+	-moz-transform: translate(@x,@y);
+	-ms-transform: translate(@x,@y);
+	-o-transform: translate(@x,@y);
+	transform: translate(@x,@y);
+}

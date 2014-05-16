@@ -1,0 +1,231 @@
+// Settings
+@import "__settings/_settings.less";
+@import "__settings/mixins.less";
+@import "__settings/variables_calc.less";
+
+// Base
+@import "alpha/alpha_base/_base-reset.less";
+@import "alpha/alpha_base/_base.less";
+@import "alpha/alpha_base/alpha_fonts.less";
+
+// Layout
+@import "alpha/alpha_layout/_layout_base.less";
+@import "alpha/alpha_layout/alpha_layout.less";
+
+// Styling
+@import "alpha/alpha_styling/alpha_typography.less";
+@import "alpha/alpha_styling/alpha_modules.less";
+@import "alpha/alpha_styling/alpha_plugins.less";
+
+
+
+// LAYOUT
+//==============================================================================================================
+
+.no-js body{
+	font-family: georgia, serif;
+}
+
+.no-js .l-container{
+	width: 100%;
+	max-width: 40em;
+	margin-right: auto;
+ 	margin-left: auto;
+	padding-right: @gutter_alpha_half;
+  padding-left: @gutter_alpha_half;
+}
+
+.no-js .l-container .l-container{
+	margin-right: -@gutter_alpha_half;
+	margin-left: -@gutter_alpha_half;
+}
+
+img{
+	width: 100%;
+	max-width: 40em;
+}
+
+
+// MODULES
+//==============================================================================================================
+
+.no-js #blogname{
+	width: 74px;
+	height: 72px;
+	margin: 0 0 @gutter_alpha 0;
+	background-size: 74px 72px;
+	background-repeat: none;
+}
+
+.no-js .m-menu-button{
+	position: absolute;
+	font-size: 0.8125em; 
+	top: 1.615em;
+	right: 1.385em; // 18px
+	display: block;
+	width: 4.615em;
+	height: 4.615em;
+	line-height: 4.615em;
+	-webkit-perspective: 50em;
+	-moz-perspective: 50em;
+}
+
+.no-js .front,
+.no-js .back{
+	display: block;
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	font-size: 1em;
+	text-align: center;
+	color: white;
+	.rounded-corners(50%);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+}
+
+.no-js .front{
+	z-index: 50;
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	background: lighten(@link, 6%);
+}
+
+.no-js .back{
+	z-index: 30;
+	-webkit-transform: rotateX(-180deg);
+	-moz-transform: rotateX(-180deg);
+	background: darken(@link, 14%);
+}
+
+.no-js .visuallyhidden {
+  border: none;
+  clip: none;
+  height: auto;
+  margin: auto;
+  overflow: auto;
+  position: static;
+  width: auto;
+}
+
+.no-js .front:before{
+	display: none;
+}
+
+.no-js .back:before{
+	display: none
+}
+
+.no-js .m-global-nav{
+	position: static;
+	height: auto;
+	width: auto;
+	overflow: auto;
+	background: darken(@linktransparent, 14%);
+}
+
+.no-js .m-listitem.has-thumb{
+	max-width: 40em;
+	margin-right: auto;
+ 	margin-left: auto;
+}	
+
+.no-js .m-listitem.has-thumb .m-entry{
+	width: 40em;
+	margin-right: @gutter_alpha_half;
+ 	margin-left: @gutter_alpha_half;
+}
+
+.no-js .m-single-thumbnail{
+	max-width: 40em;
+	margin: 0 auto;
+}
+
+
+
+// STATES
+//==============================================================================================================
+
+.no-js .m-global-nav.s-is-hidden{
+	height: auto;
+	border: none;
+	overflow: auto;
+	
+	.menu{
+		.translate(0, 0);
+	}
+}
+
+.no-js .menu .is-last a{
+	border-bottom: none;
+}
+
+.no-js .m-form-input{
+	background: white;
+}
+
+.no-js .menu-item.current-menu-item a,
+.no-js .menu-item.current-post-ancestor a{
+	color: darken(@linkdarken, 8%);
+}
+
+.no-js .m-taxonomy-header.s-is-hidden{
+	
+	.t-xlarge{
+		.box-shadow(none);
+	}
+}
+
+.no-js .m-editable-aside.s-is-hidden{
+	.translate(-105%, 0);
+	overflow: hidden;
+	max-height: 100%;
+}
+
+.no-js .footerwrapper{
+
+	&.s-is-hidden{
+		.translate(100%, 0);
+	}
+	
+	&.s-is-fixed{
+		position: fixed;
+	}
+}
+
+.m-global-footer.s-overflow-auto{
+	overflow: auto;
+}
+
+.no-js .m-listitem.s-no-hit{
+	
+	.m-form-input{
+		background: white;
+	}
+	
+	.m-button{
+		z-index: 10;
+		background: @link;	
+	}
+
+	.m-global-search{
+		margin: @gutter_alpha 0 0 0;
+	}
+	
+	.t-small{
+		text-transform: none;
+	}	
+
+	a{
+		color: @link;
+	}
+}
+
+// About page = ID 491 
+
+.no-js .page-id-491 .goodbye a{
+	padding-top: 0;
+	border: none;
+}

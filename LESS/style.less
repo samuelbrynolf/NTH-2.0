@@ -1,0 +1,153 @@
+/*
+Theme Name: Note To Helf
+Theme URI: http://www.note-to-helf.com
+Description: Built on Framewok 3.0
+Version: 2.0
+Author: Samuel Larsson
+Author URI: http://note-to-helf.com
+*/
+
+// Settings
+@import "__settings/_settings.less";
+@import "__settings/mixins.less";
+@import "__settings/variables_calc.less";
+
+
+
+//ALPHA =============================================================================================================
+
+// Base
+@import "alpha/alpha_base/_base-reset.less";
+@import "alpha/alpha_base/_base.less";
+@import "alpha/alpha_base/alpha_fonts.less";
+
+// Layout
+@import "alpha/alpha_layout/_layout_base.less";
+@import "alpha/alpha_layout/alpha_layout.less";
+
+// Styling
+@import "alpha/alpha_styling/alpha_typography.less";
+@import "alpha/alpha_styling/alpha_modules.less";
+@import "alpha/alpha_styling/alpha_plugins.less";
+@import "alpha/alpha_styling/alpha_animations.less";
+@import "alpha/alpha_styling/alpha_states.less";
+
+
+
+//BETA ==============================================================================================================
+
+@media screen and (min-width: @beta_query) {
+	// Base
+	@import "beta/beta_base.less";
+
+	//Layouts
+	@import "beta/beta_layout.less";
+	
+	// Styling
+	@import "beta/beta_styling/beta_typography.less";
+	@import "beta/beta_styling/beta_modules.less";
+	@import "beta/beta_styling/beta_plugins.less";
+	// @import "beta/beta_styling/beta_animations.less";
+	// @import "beta/beta_styling/beta_states.less";
+}
+
+
+
+//CHARLIE ===========================================================================================================
+
+@media screen and (min-width: @charlie_query) {
+	// Base
+	@import "charlie/charlie_base.less";
+
+	//Layout
+	@import "charlie/charlie_layout.less";
+	
+	// Styling
+	@import "charlie/charlie_styling/charlie_typography.less";
+	@import "charlie/charlie_styling/charlie_modules.less";
+	@import "charlie/charlie_styling/charlie_plugins.less";
+	@import "charlie/charlie_styling/charlie_animations.less";
+	@import "charlie/charlie_styling/charlie_states.less";
+}
+
+
+
+//DELTA==============================================================================================================
+
+@media screen and (min-width: @delta_query) {
+	// Base
+	@import "delta/delta_base.less";
+
+	//Layout
+	@import "delta/delta_layout.less";
+	
+	// Styling
+	@import "delta/delta_styling/delta_typography.less";
+	@import "delta/delta_styling/delta_modules.less";
+	@import "delta/delta_styling/delta_plugins.less";
+	// @import "delta/delta_styling/delta_animations.less";
+	@import "delta/delta_styling/delta_states.less";
+}
+
+
+
+//ECHO ==============================================================================================================
+
+@media screen and (min-width: @echo_query) {
+	// Base
+	@import "echo/echo_base.less";
+
+	//Layout
+	//@import "echo/echo_layout.less";
+	
+	// Styling
+	@import "echo/echo_styling/echo_typography.less";
+	@import "echo/echo_styling/echo_modules.less";
+	@import "echo/echo_styling/echo_plugins.less";
+	// @import "echo/echo_styling/echo_animations.less";
+	// @import "echo/echo_styling/echo_states.less";
+}
+
+
+
+//RETINA ==============================================================================================================
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+	#blogname{
+		background-image: url(img/logo_alpha_hires.png);
+	}
+	
+	.avatar{
+		background-image: url(img/avatar-s-r.jpg);
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: @beta_query),
+only screen and (   min--moz-device-pixel-ratio: 2) and (min-width: @beta_query),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (min-width: @beta_query),
+only screen and (        min-device-pixel-ratio: 2) and (min-width: @beta_query),
+only screen and (                min-resolution: 192dpi) and (min-width: @beta_query),
+only screen and (                min-resolution: 2dppx) and (min-width: @beta_query){
+	
+	.avatar{
+		background-image: url(img/avatar-m-r.jpg);
+	}
+}
+	
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: @charlie_query),
+only screen and (   min--moz-device-pixel-ratio: 2) and (min-width: @charlie_query),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (min-width: @charlie_query),
+only screen and (        min-device-pixel-ratio: 2) and (min-width: @charlie_query),
+only screen and (                min-resolution: 192dpi) and (min-width: @charlie_query),
+only screen and (                min-resolution: 2dppx) and (min-width: @charlie_query){
+	
+	#blogname{
+		background-image: url(img/logo_charlie_hires.png);
+	}
+}

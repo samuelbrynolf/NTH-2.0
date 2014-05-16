@@ -1,0 +1,1 @@
+<a id="addBookmark" class="bookmark-<?php the_ID(); ?>" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="nofollow"><?php the_title(); ?></a>

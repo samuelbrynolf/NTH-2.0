@@ -1,0 +1,90 @@
+// ADD HOOKS FOR JS-SCREEN DETECTION
+//==============================================================================================================
+
+head{
+	font-family: 'aq';
+}
+
+body{
+	font-size: $alpha_bodysize/16*100+0%;
+  line-height: $leading;
+	font-kerning: normal; // Tar autoprefixern hand om denna? Eftersom det bara behövs för -webkit...
+	text-size-adjust: 100%; // Tar autoprefixern hand om denna? Eftersom det bara behövs för -webkit...  // http://blog.55minutes.com/2012/04/iphone-text-resizing/ 
+}
+
+body:after {
+	content: 'aq';
+  display:none;
+}
+
+
+@media screen and (min-width: $beta_query) {
+	
+	head{
+		font-family: 'bq';
+	}
+	
+	body{
+		font-size: $beta_bodysize/16*100+0%;
+	}
+
+	body:after {
+		content: 'bq';
+	}
+}
+
+@media screen and (min-width: $charlie_query) {
+	
+	head{
+		font-family: 'cq';
+	}
+	
+	body{
+		font-size: $charlie_bodysize/16*100+0%;
+	}
+
+	body:after {
+		content: 'cq';
+	}
+}
+
+@media screen and (min-width: $delta_query) {
+	head{
+		font-family: 'dq';
+	}
+	
+	body{
+		font-size: $delta_bodysize/16*100+0%;
+	}
+
+	body:after {
+		content: 'dq';
+	}
+}
+
+@media screen and (min-width: $echo_query) {
+	
+	head{
+		font-family: 'eq';
+	}
+	
+	body{
+		font-size: $echo_bodysize/16*100+0%;
+	}
+
+	body:after {
+		content: 'eq';
+	}
+}
+
+
+
+// MEDIA RWD
+//==============================================================================================================
+
+img,
+object,
+embed {
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}

@@ -1,0 +1,93 @@
+// NESTLINGS
+// ========================================
+
+header p{
+	background: {
+		color: red;
+		size: 16px 16px;
+		image: url(snatch.png);
+		repeat: no-repeat;
+		position: top left;
+	}
+	
+	&.class{
+		color: red;
+	}
+	
+	&:hover{
+		color: blue;
+	}
+	
+	body.override &{
+		// compiles to "body.override header p"
+		
+	}
+}
+
+
+
+// MIXINS
+// ========================================
+
+@mixin mix-style{
+
+}
+
+.use-mixin{
+	@include mix-style;
+}
+
+
+
+// EXTENDS (Same old classes overall? Use extends)
+// ========================================
+
+%divider{
+	// wont output css
+}
+
+header h1{
+	@extend %divider;
+}
+
+.alert{
+	// gradient
+}
+
+.alert-positive{
+	@extend .alert;
+	background: green;
+}
+
+// OUTPUTS... -->
+
+.alert,
+.alert-positive{
+	// gradient
+}
+
+.alert-positive{
+	background: green;
+}
+
+// --- <
+
+.m-test{
+	background: yellow;
+	
+	@media screen and (min-width: $beta_query) {
+		background: blue;
+	}
+	
+	@media screen and (min-width: $charlie_query) {
+		background: gray;
+	}
+	
+	@media screen and (min-width: $delta_query) {
+		background: green;
+	}
+	
+	@media screen and (min-width: $echo_query) {
+		background: pink;
+	}
+}

@@ -1,0 +1,153 @@
+// MISC
+//==============================================================================================================
+
+.menu .is-last a{
+	border-bottom: none;
+}
+
+
+// FOCUS
+//==============================================================================================================
+
+.m-global-search .m-form-input:focus{
+	background: white;
+}
+
+
+
+// IS-ACTIVE
+//==============================================================================================================
+
+.parent.s-is-active{
+	margin-bottom: 1em;
+
+	&:after{
+		content: '\e605';
+	}
+}
+
+.m-global-header.no-thumb.s-is-active{
+	background: @link;
+	
+	#blogname,
+	.t-small{
+		opacity: 1;
+	}
+}
+
+#overlay.s-is-active{
+	position: fixed;
+	z-index: 15;
+	width: 100%;
+	height: 100%;
+	background: darken(@linktransparent, 14%);
+}
+
+.has-thumb #overlay.s-is-active{
+	background: darken(@linkmoretransparent, 14%);
+}
+
+
+
+// IS-PASSIVE
+//==============================================================================================================
+
+.menu .parent.s-is-passive:after{
+	content: '\e604';
+}
+
+
+
+// IS-CURRENT
+//==============================================================================================================
+
+.menu-item.current-menu-item a,
+.menu-item.current-post-ancestor a{
+	color: darken(@linkdarken, 8%);
+}
+
+
+
+// IS-MOVED
+//==============================================================================================================
+
+.s-is-moved.m-global-nav{
+	position: absolute;
+	z-index: 40;
+	height: auto;
+	width: 100%;
+	overflow: auto;
+	background: none;
+}
+
+.s-is-moved .menu{
+	.translate(0,0);
+}	
+
+
+
+// IS-HIDDEN
+//==============================================================================================================
+
+.s-is-hidden.m-global-nav.s-is-moved{
+	height: 1px;
+	border: none;
+	overflow: hidden;
+	
+	.menu{
+		.translate(0,-2.5em);
+	}
+}
+
+
+
+// MENU-BUTTON
+//==============================================================================================================
+
+.m-menu-button.s-is-flipped .back {
+	z-index: 30;
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+}
+
+.m-menu-button.s-is-flipped .front {
+	z-index: 20;
+	-webkit-transform: rotateX(-180deg);
+	-moz-transform: rotateX(-180deg);
+}
+
+
+
+// TEMPLATE-STATES
+//==============================================================================================================
+
+.m-listitem.s-no-hit{
+	
+	.m-form-input{
+		background: white;
+	}
+	
+	.m-button{
+		z-index: 10;
+		background: @link;	
+	}
+
+	.m-global-search{
+		margin: @gutter_alpha 0 0 0;
+	}
+	
+	.t-small{
+		text-transform: none;
+	}	
+
+	a{
+		color: @link;
+	}
+}
+
+// About page = ID 491 
+
+.page-id-491 .goodbye a{
+	padding-top: 0;
+	border: none;
+}

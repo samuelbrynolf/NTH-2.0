@@ -1,0 +1,52 @@
+// TYPO-CLASSES
+//==============================================================================================================
+
+.t-large{
+	.type-to-em(42,60);
+	margin-bottom: 0.167em; // 6px
+}
+
+.t-medium{
+	.type-to-em(24,33);
+}
+
+.t-preamble p{
+	.type-to-em(21,33);
+	margin-top: 1.714em; // 36px;
+	margin-bottom: 1.143em; // 24px
+	padding-bottom: 1em;
+}
+
+
+
+// TYPESETTINGS FOR SPECIFIC MODULES
+//==============================================================================================================
+
+.m-projectdiary-list .t-small-title{
+	padding-right: 2.571em;
+	padding-left: 2.571em;
+}
+
+// Listings
+
+.m-listitem .t-medium{
+	padding-top: @leading;
+	margin-bottom: 0.5em; // 12px
+}
+
+.m-listitem .t-small{
+	padding-bottom: 0.5em; // 9px
+}
+
+// The content
+
+.m-the-content{
+
+	h3,
+	p,
+	ul,
+	ol,
+	pre{
+		.type-to-em(16,26);
+	}
+}

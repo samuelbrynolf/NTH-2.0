@@ -1,0 +1,12 @@
+{
+  "name": "aventyret_dev",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-autoprefixer": "~0.7.2",
+    "grunt-yui-compressor": "~0.3.0"
+  }
+}

@@ -1,0 +1,219 @@
+// GLOBAL HEADER, HEADERS & HEADER-MODULES
+//==============================================================================================================
+
+.m-global-header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 25%;
+	height: 100%;
+}
+
+.m-article-header.has-thumb{
+	padding-top: 3em; // 48px
+}
+
+.archive .m-global-header{
+	padding-bottom: 0.9375em; //18px
+}
+
+.m-taxonomy-header{
+	padding-top: @gutter_charlie;
+	color: @bodycolor;
+	background: @bodylighten;
+}
+
+
+
+// NAVIGATION
+//============================================================================================================== 
+
+#blogname{
+	width: 134px;
+	height: 136px;
+	margin: 0;
+	background-image: url(img/logo_charlie_lores.png);
+	background-size: 134px 136px;
+}
+
+.m-taxonomy-header.willkommen-bei-uns {
+	display: block;
+	color: white;
+}
+
+.m-menu-button{
+	display: none;
+}
+
+.m-global-nav{
+	position: absolute;
+	z-index: 40;
+	font-size: 87.5%;
+	top: 168px;
+	left: 0;
+	width: 25%;
+	height: auto;
+	overflow: auto;
+	background: none;
+}
+
+.menu-item a{
+	border-bottom-color: @link;
+	padding: 0.125em 0;
+}
+
+.menu	.parent:after{
+	top: 0.74em;
+}
+
+.sub-menu a{
+	border-bottom-color: lighten(@link, 15%);
+}
+
+
+
+// SEARCH
+//============================================================================================================== 
+
+.m-global-search:before{
+	display: none;
+}
+
+.m-global-search .m-form-input{
+	padding-left: @gutter_alpha;
+	color: darken(@linkdarken, 8%);
+	background: lighten(@link, 5%);
+}
+
+.m-global-search .m-button{
+	text-align: center;
+	background: @link;
+}
+
+
+
+// LIST-MODULE
+//==============================================================================================================
+
+.m-listitem.has-thumb .m-entry{
+	bottom: 25%;
+	padding: 0 @gutter_charlie;
+}
+
+.m-listitem-figure-list{
+	padding-top: @gutter_charlie;
+}
+
+.m-listitem-figure{
+	margin-bottom: @gutter_charlie;
+}
+
+.heightcontrol{
+	height: 8.625em; // 138px
+}
+
+
+
+// ARTICLE MODULES AND ELEMENTS
+//==============================================================================================================
+
+.m-the-content blockquote{
+	margin: 1.5em @gutter_charlie 1.5em -@gutter_charlie;
+	padding: 0 @gutter_charlie;
+	
+	p{
+		.type-to-em(12,18);
+		color: @bodycolor;
+	}
+}
+
+.yarpp-related{
+	background: @bodylighten;
+}
+
+.m-related{
+	background: none;
+}
+
+
+
+// 404
+//==============================================================================================================
+
+.msg404{
+	padding-top: 100%;
+}
+	
+.cough{
+	position: fixed;
+	width: auto;
+	bottom: 72px;
+}
+	
+.error404-paragraph{
+	position: fixed;
+	width: auto;
+	bottom: 72px;
+	right: 0;
+	text-align: right;
+}
+
+
+
+// FOOTER MODULES AND ELEMENTS
+//==============================================================================================================
+
+.m-pagination{
+	background: @bodylighten;
+}
+
+.m-global-footer{
+	font-size: 87.5%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	width: 25%;
+	height: 100%;
+	overflow: hidden;
+	padding-top: @leading;
+	color: darken(@bodycolor, 6%);
+	background: darken(@body, 10%);
+	
+	a{
+		color: white;
+	}
+
+	p	a{
+		font-style: normal;
+		color: @link;
+	}
+
+	
+	.goodbye a{ 
+		display: none;
+		
+		&:before{
+			display: none;		
+		}
+	}
+}
+
+.footerwrapper{
+	display: none;
+	.translate(0, 0);
+}
+
+
+
+// TINY-TINY MODULES || HELPCLASSES
+//==============================================================================================================
+
+.m-divider{
+	margin-top: 1.6875em; // 27px
+	margin-bottom: @leading; // 24px;
+}
+
+.avatar{
+	margin: 0 0 @gutter_alpha @gutter_alpha;
+}

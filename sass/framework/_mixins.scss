@@ -1,0 +1,125 @@
+// MIXINS & FUNCTIONS
+//==============================================================================================================
+
+@mixin type-to-em( $fontsizepx: $alpha_bodysize, $lineheightpx: $body_leading ) {
+	font-size: $fontsizepx / $alpha_bodysize + 0em;
+	line-height: $lineheightpx / $fontsizepx;
+}
+
+@mixin inner-shadow($horizontal:0, $vertical:0, $blur:2px, $alpha: 1)
+{
+  //-webkit-box-shadow: inset $horizontal $vertical $blur rgba(0, 0, 0, $alpha);
+  //-moz-box-shadow: inset $horizontal $vertical $blur rgba(0, 0, 0, $alpha);
+  box-shadow: inset $horizontal $vertical $blur rgba(0, 0, 0, $alpha);
+}
+
+@mixin inner-glow($horizontal:0, $vertical:0, $blur:1px, $alpha: 1)
+{
+  //-webkit-box-shadow: inset $horizontal $vertical $blur rgba(255, 255, 255, $alpha);
+  //-moz-box-shadow: inset $horizontal $vertical $blur rgba(255, 255, 255, $alpha);
+  box-shadow: inset $horizontal $vertical $blur rgba(255, 255, 255, $alpha);
+}
+
+@mixin rounded-corners($radius: 0px)
+{
+  //-webkit-border-radius:  $radius;
+  //-moz-border-radius:     $radius;
+  //-ms-border-radius:      $radius;
+  //-o-border-radius:       $radius;
+  border-radius:          $radius;
+}
+
+@mixin box-shadow($string)
+{
+  //-webkit-box-shadow: $string;
+  //-moz-box-shadow:    $string;
+  box-shadow:         $string;
+}
+
+@mixin text-shadow($string: 0 1px 3px rgba(0, 0, 0, 0.25))
+{
+  text-shadow: $string;
+}
+
+@mixin textColumnCount($count)
+{
+  //-webkit-column-count: $count;
+  //-moz-column-count: 		$count;
+  column-count: 				$count;
+}
+
+@mixin textColumnGap($gap)
+{
+  //-webkit-column-gap: 	$gap;
+  //-moz-column-gap: 			$gap;
+  column-gap: 				$gap;
+}
+
+@mixin textColumnBreak($when:always)
+{
+  //-webkit-column-break-before: $when;
+  //-moz-column-break-before: $when;
+  column-break-before: $when;
+}
+
+@mixin transition($prop: all, $time: 1s, $ease: linear)
+{
+  //-webkit-transition: 	$prop $time $ease;
+  //-moz-transition: 			$prop $time $ease;
+  //-o-transition: 				$prop $time $ease;
+  //-ms-transition: 			$prop $time $ease;
+  transition: 					$prop $time $ease;
+}
+
+@mixin translate3d($x:0, $y:0, $z:0)
+{
+  transform: translate3d($x,$y,$z);
+}
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation:    $animations;
+  -o-animation:      $animations;
+  animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+  //@-webkit-keyframes #{$animationName} {
+  //  @content;
+  //}
+  //@-moz-keyframes #{$animationName} {
+  //  @content;
+  //}
+  //@-o-keyframes #{$animationName} {
+  //  @content;
+  //}
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+
+
+// MULTIGRADIENT
+//==============================================================================================================
+
+@mixin multigradient($firstC: $gradient_top, $secondC: $gradient_33, $thirdC: $gradient_66, $fourthC: $gradient_bottom){
+	background: $thirdC;
+	//background: -moz-linear-gradient(top,  $firstC 0%, $secondC 45%, $thirdC 67%, $fourthC 100%);
+	//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$firstC), color-stop(33%,$secondC), color-stop(67%,$thirdC), color-stop(100%,$fourthC));
+	//background: -webkit-linear-gradient(top,  $firstC 0%,$secondC 45%,$thirdC 67%,$fourthC 100%);
+	//background: -o-linear-gradient(top,  $firstC 0%,$secondC 45%,$thirdC 67%,$fourthC 100%);
+	//background: -ms-linear-gradient(top,  $firstC 0%,$secondC 45%,$thirdC 67%,$fourthC 100%);
+	background: linear-gradient(to bottom,  $firstC 0%,$secondC 45%,$thirdC 67%,$fourthC 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$firstC}', endColorstr='#{$fourthC}',GradientType=0 );
+}

@@ -1,0 +1,45 @@
+
+
+// GLOBALS
+//==============================================================================================================
+
+html{	
+	//min-height: 100%;
+  -webkit-tap-highlight-color : rgba(0,0,0,0);
+}
+
+
+
+//==============================================================================================================
+
+body{	
+  font-family: $sans-serif;
+  //font-feature-settings: 'liga'; // Tar autoprefixern hand om denna? Eftersom det bara behövs för -webkit...
+  //min-height: 100%;
+  color: $bodycolor;
+  background: $body;
+}
+
+a{
+	text-decoration: none;
+	color: $link;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+em{
+  font-style: italic;
+}
+
+strong{
+  font-weight: bold;
+}
+
+strong em,
+em strong{
+	font-style: italic;
+	font-weight: bold;
+}

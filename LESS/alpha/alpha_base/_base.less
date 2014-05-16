@@ -1,0 +1,88 @@
+// ADD HOOKS FOR JS-SCREEN DETECTION
+//==============================================================================================================
+
+body:after {
+	content: 'alphascreen';
+	display: block;
+  text-indent: -9999px;
+  background: darken(@link, 14%);
+}
+
+
+
+// GLOBALS
+//==============================================================================================================
+
+html{	
+	min-height: 100%;
+	position: relative;
+	font-size: 100%;
+  -webkit-tap-highlight-color : rgba(0,0,0,0);
+  -webkit-text-size-adjust: 100%; // http://blog.55minutes.com/2012/04/iphone-text-resizing/
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body{
+	font-size: @alpha_bodysize/16+0em;
+  font-family: @serif;
+  line-height: @leading;
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
+  color: @bodycolor;
+  background-color: @body;
+}
+
+a{
+	text-decoration: none;
+	color: @link;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+em{
+  font-style: italic;
+  font-weight: 400;
+}
+
+strong{
+  font-weight: 700;
+}
+
+pre,
+code{
+	font-family: monspace;
+}
+
+del{
+	color: @accentsecondary;
+}
+
+// MEDIA RWD
+//==============================================================================================================
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+
+
+// NON-STYLING GLOBAL BEHAVIOURS
+//==============================================================================================================
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

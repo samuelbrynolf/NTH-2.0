@@ -1,0 +1,53 @@
+// TRANSITIONS
+//==============================================================================================================
+
+.menu{
+	.transition(all, 0.3s, ease-in-out);
+}
+
+.m-menu-button .front,
+.m-menu-button .back{
+	.transition(all, 0.3s, ease-in-out);
+}
+
+.m-form-input{
+	.transition(background-color, 0.2s, linear);
+}
+
+
+
+// KEYFRAME-ANIMATIONS
+//==============================================================================================================
+
+.m-single-thumbnail{
+	-webkit-animation: fadein 2s 1; // Safari 4+ 
+  -moz-animation:    fadein 2s 1; // Fx 5+ 
+  -o-animation:      fadein 2s 1; // Opera 12+ 
+  animation:         fadein 2s 1; // IE 10+ 
+}
+
+.parent.s-is-active{ 
+	-webkit-animation: fadein 2s 1; // Safari 4+ 
+	-moz-animation:    fadein 2s 1; // Fx 5+ 
+	-o-animation:      fadein 2s 1; // Opera 12+ 
+	animation:         fadein 2s 1; // IE 10+ 
+}
+
+// KEYFRAME FADEIN 
+
+@-webkit-keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}

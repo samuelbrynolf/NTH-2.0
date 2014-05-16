@@ -1,0 +1,84 @@
+// TYPOCLASSES
+//==============================================================================================================
+
+%custom_bold{
+	font-family: $display;
+	font-weight: normal;
+	font-style: normal;
+}
+
+%custom_bold_italic{
+	font-family: $display_italic;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.t-xlarge,
+.t-large,
+.t-medium,
+.t-small,
+.t-preamble{
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  a,
+  span{
+    font-weight: inherit;
+  }
+}
+
+.t-xlarge,
+.t-large,
+.t-medium,
+.t-small{
+	
+	em{
+		@extend %custom_bold_italic;
+	}
+}
+
+.t-xlarge{
+	@include type-to-em(34,46);
+}
+
+.t-large{
+	
+	a{
+		color: inherit;
+	}
+}
+
+.t-medium{
+
+}
+
+.t-small{
+
+}
+
+.t-preamble{
+
+}
+
+.t-fineprint{
+
+}
+
+.m-module{
+	background: {
+		color: transparent;
+		image: url(/wp-content/themes/aventyret/assets/img/bg_mainnav__toggler_alpha_lores.png);
+	 	repeat: no-repeat;
+	 	position: left bottom;
+	 	size: 66px 33px;
+	}
+}
+
+.m-blogpost{
+	@extend .m-module;
+
+	& > *{
+		@extend .t-preamble;
+	}
+}

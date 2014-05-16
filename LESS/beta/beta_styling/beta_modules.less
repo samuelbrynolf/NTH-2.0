@@ -1,0 +1,140 @@
+// GLOBAL HEADER, HEADERS & HEADER-MODULES
+//==============================================================================================================
+
+#blogname{
+	margin: 0 0 @gutter_beta 0;
+}
+
+.m-article-header{
+	padding-top: 2*@leading; // 48px
+}
+
+.m-article-header.has-thumb{
+	padding-top: 2.25em; // 36px;
+}
+
+.m-menu-button{
+	top: @gutter_beta;
+	right: 3.83em;
+}
+
+
+
+// LIST-MODULE
+//==============================================================================================================
+
+.m-listitem{
+	padding-bottom: 1.3125em; // 21px
+}
+
+.m-listitem.has-thumb .m-entry{
+	padding: 0 3.75em; // 60px
+}
+
+.m-listitem-figure-list{
+	padding-top: @gutter_beta;
+}
+
+.m-listitem-figure figure{
+	margin: 0;
+}
+
+.heightcontrol{
+	height: 9em; // 144px
+}
+
+
+
+// ARTICLE MODULES AND ELEMENTS
+//==============================================================================================================
+
+.m-the-content .gallery {
+	.alignleft{
+		float: left;
+		width: 48%;
+		margin-right: 2%;
+		margin-bottom: 2%;
+	}
+	
+	&:nth-of-type(odd) .alignleft{
+		margin-right: 2%;
+		margin-bottom: 4%;
+	}
+	
+	&:nth-of-type(even) .alignleft{
+		margin-right: 0;
+		margin-left: 2%;
+		margin-bottom: 4%;
+	}
+}
+		
+.m-the-content blockquote{
+	margin: 3em 0 3em -(@gutter_beta_half+3em);
+	padding: 0 3em 0 3.333em; // distance + border
+	border-width: @borderheight*2;
+	
+	p{
+		.type-to-em(18,27);
+		color: #000;
+	}
+	
+	p + p{
+		.type-to-em(12,18);
+		margin-bottom: 0;
+	}
+}
+
+.m-appendix{
+	padding-bottom: 1.875em;
+}
+
+.m-related{
+	padding-top: 1.6875em; // 24px
+	padding-bottom: 1.875em;
+}
+
+
+
+// 404
+//==============================================================================================================
+
+.msg404{
+	padding-top: 112%;
+}
+	
+.cough{
+	font-size: 3em;
+	left: 1.5em;
+	bottom: 33%;
+}
+		
+.error404-paragraph{
+	padding-right: 6em; // 72px
+	padding-left: 6em; 
+	bottom: 22%;
+}
+
+
+
+// FOOTER MODULES AND ELEMENTS
+//==============================================================================================================
+
+.m-global-footer{
+	padding-top: 1.875em;
+}
+
+
+
+// TINY-TINY MODULES || HELPCLASSES
+//==============================================================================================================
+
+.m-divider{
+	margin:  1.3125em 0; // 21px
+}
+
+.avatar{
+	width: 6em; // 96px
+	height: 6em;
+	margin: 0 0 @gutter_beta @gutter_charlie;
+	background-size: 6em;
+}

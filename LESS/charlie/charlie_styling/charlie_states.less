@@ -1,0 +1,109 @@
+// HOVER
+//==============================================================================================================
+
+.m-article #addBookmark:hover{
+	color: @accentsecondary;
+}
+
+.m-listitem.no-thumb:hover{
+	background: @bodylighten;
+}
+
+.m-projectdiary-list .m-listitem.no-thumb:hover{
+	background: @body;
+}
+
+
+
+// FOCUS
+//==============================================================================================================
+
+.m-form-input:focus{
+	background: @link;
+}
+
+
+
+// IS-ACTIVE
+//==============================================================================================================
+
+#overlay.s-is-active{
+	display: none;
+}
+
+
+
+// IS-CURRENT
+//==============================================================================================================
+
+.menu-item.current-menu-item a,
+.menu-item.current-post-ancestor a{
+	color: darken(@linkdarken, 3%);
+}
+
+
+
+// IS-MOVED
+//==============================================================================================================
+
+.s-is-moved.m-global-nav{
+	width: 25%;
+}
+
+
+
+// IS-HIDDEN
+//==============================================================================================================
+
+.s-is-hidden.m-global-nav.s-is-moved{
+	height: auto;
+	overflow: auto;
+	
+	.menu{
+		//.translate(0,0);
+	}
+}
+
+// footer wrapper, footerLogic
+
+.footerwrapper{
+
+	&.s-is-hidden{
+		.translate(100%, 0);
+	}
+	
+	&.s-is-fixed{
+		position: fixed;
+	}
+}
+
+.m-global-footer.s-overflow-auto{
+	overflow: auto;
+}
+
+
+
+
+// TEMPLATE-STATES
+//==============================================================================================================
+
+.m-listitem.s-no-hit .m-form-input{
+	padding-left: 3.75em;
+}
+
+.m-listitem.s-no-hit .m-global-search:before{
+	display: block;
+	color: darken(@body, 6%);
+}
+
+.error404{
+	padding: 0;
+}
+
+.error404 .m-global-header{
+	display: none;
+}
+	
+.search-no-results .m-global-nav .m-global-search	{
+	display: none;
+}

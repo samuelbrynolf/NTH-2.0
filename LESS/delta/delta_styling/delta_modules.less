@@ -1,0 +1,265 @@
+// GLOBAL HEADER, HEADERS & HEADER-MODULES
+//==============================================================================================================
+
+.m-global-nav{
+	top: 192px;
+}
+
+.m-article-header{
+	padding-top: 4.5em; // 72px
+}
+
+.m-taxonomy-header{
+	padding-top: @gutter_delta;
+	padding-bottom: 1.875em; // 30px
+}
+
+.m-excerpt{
+	.type-to-em(14,24);
+	margin-top: 2.571em; // 46px
+}
+
+
+
+// EDITABLE ASIDE
+//============================================================================================================== 
+
+.m-editable-aside{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 70;
+	width: 25%;
+	min-height: 100%;
+	.translate(0,0);
+	font-size: 87.5%;
+	padding-top: 1.875em;
+	padding-bottom: 1.875em;
+	color: darken(@linkdarken, 9%);
+	background: lighten(@link,2%);
+	.box-shadow (0.08em 0 0.13em rgba(0,0,0,0.2));
+}
+	
+.m-editable-aside .t-medium{
+	margin-bottom: 0.714em; // 18px
+	padding-bottom: 0.571em; // 12px
+	text-shadow: 0 1px 0 rgba(255,255,255,0.22);
+	border-bottom: 1px solid lighten(@linkdarken, 5%);
+}
+
+.m-toggle-editable-btn{
+	display: block;
+	position: absolute;
+	top: @gutter_alpha;
+	right: @gutter_charlie;
+	padding-right: @gutter_beta;
+	font-size: 0.875em;
+}
+
+.m-toggle-editable-btn:before{
+	font-size: 0.625em;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 1.3em;
+	z-index: 100;
+	content: "\e606";
+}
+	
+.m-editable-list {
+	.type-to-em(14,21);
+}
+
+.m-editable-list.user-notes{
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+.m-editable-list li{
+	margin-bottom: 1.286em; // 18px
+	font-style: italic;
+}
+
+.m-editable-aside a{
+	font-family: @serif;
+	font-style: italic;
+	font-weight: normal;
+	color: white;
+}
+
+.m-editable-aside .m-button{
+	width: 100%;
+	margin-bottom: 2*@leading;
+	background: lighten(@link, 5%);
+}
+
+
+
+// LIST-MODULE
+//==============================================================================================================
+
+.m-listitem{
+	padding-bottom: 2.25em; // 36px
+}
+
+.m-listitem.has-thumb .m-entry{
+	padding: 0 @gutter_delta;
+}
+
+.m-listitem-figure-list{
+	padding-top: @gutter_delta;
+}
+
+.m-listitem-figure{
+	margin-bottom: @gutter_delta;
+}
+
+.heightcontrol{
+	height: 9.375em; // 150px
+}
+
+
+
+// ARTICLE MODULES AND ELEMENTS
+//==============================================================================================================
+
+.m-article{
+	position: relative;
+	margin: 0 2.25em;
+}
+
+.m-article #addBookmark{
+	display: block;
+	position: absolute;
+	right: @gutter_delta;
+	top: 0;
+	z-index: 10;
+	width: 3em;
+	height: 3em;
+	text-indent: -9999px;
+	color: darken(@body, 10%);
+}
+		
+.m-article #addBookmark:before{
+	display: block;
+	position: absolute;
+	z-index: 20;
+	top: -0.05em;
+	right: 0;
+	content: "\e608";
+	font-size: 1.5em;
+	text-indent: 0;
+}
+
+.m-article-figure,
+.m-article-embed {
+	margin: 0 -2.25em;
+}
+
+
+
+// ARTICLE MODULES AND ELEMENTS
+//==============================================================================================================
+
+.m-the-content{
+	//max-width: 45em;
+			
+	blockquote{
+		margin: 3em -(@gutter_delta) 3em -(@gutter_delta+2.25em);
+		padding: 0 0 0 @gutter_delta*1.8;
+			
+		p{
+			.type-to-em(18,30);
+			color: #000;
+		}
+	}
+}
+
+.m-appendix{
+	max-width: 30em;
+}
+
+.yarpp-related{
+	margin: 0 -2.25em;
+}
+
+.m-related{
+	margin-right: 2.25em;
+	margin-left: 2.25em;
+}
+
+.m-projectdiary-list{
+	margin: 0 -2.25em;
+
+	.m-listitem{
+		padding-right: @gutter_delta_half+2.25;
+		padding-left: @gutter_delta_half+2.25;
+	}
+}
+
+
+
+// FOOTER MODULES AND ELEMENTS
+//==============================================================================================================
+
+.m-global-footer{
+	position: relative;
+	overflow: visible; // or auto?
+	width: 100%;
+	height: auto; 
+	font-size: 100%;
+	background: darken(@link, 14%);
+	
+	a{
+		color: lighten(@link,6%);
+		
+		&.t-medium{
+			margin-right: 1.5em;
+			padding: 1em 0 0.333em; // 12px
+		}
+	}
+	
+	.avatar{
+		display: none;
+	}
+	
+	p{
+		.textColumnBreak();
+		
+		a{
+			color: lighten(@link,6%);
+		}
+	}
+
+	.goodbye a{ 
+		display: block;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		padding-top: 2.25em; // 30px
+		
+		&:before{
+			display: block;
+		}
+	}
+}
+
+.footerwrapper{
+	display: block;
+}
+
+.columns{
+	margin-bottom: @leading;
+	.textColumnCount(2);
+	.textColumnGap(@gutter_delta);
+}
+
+
+
+// TINY-TINY MODULES || HELPCLASSES
+//==============================================================================================================
+
+.m-divider{
+	margin-top: 1.6875em; // 27px
+	margin-bottom: @leading; // 24px;
+}

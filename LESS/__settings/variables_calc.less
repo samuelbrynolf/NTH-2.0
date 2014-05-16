@@ -1,0 +1,21 @@
+
+//VARIABLE-CALCULATIONS
+// -> Uses some _settings.less variables for calculations. Outputs more useful variables. No styling but math.
+//==============================================================================================================
+
+@leading: 							@body_leading/@alpha_bodysize+0em;
+@gutter_alpha_half:			(@alpha_gutter / @alpha_bodysize)/2+0em;
+@gutter_alpha:					(@alpha_gutter / @alpha_bodysize)+0em;
+@gutter_beta_half:			(@beta_gutter / @alpha_bodysize)/2+0em;
+@gutter_beta:						(@beta_gutter / @alpha_bodysize)+0em;
+@gutter_charlie_half:		(@charlie_gutter / @alpha_bodysize)/2+0em;
+@gutter_charlie:				(@charlie_gutter / @alpha_bodysize)+0em;
+@gutter_delta_half:			(@delta_gutter / @alpha_bodysize)/2+0em;
+@gutter_delta:					(@delta_gutter / @alpha_bodysize)+0em;
+@gutter_echo_half:			(@echo_gutter / @alpha_bodysize)/2+0em;
+@gutter_echo:						(@echo_gutter / @alpha_bodysize)+0em;
+@beta_query: 						(@beta_screen / @alpha_bodysize)+0em; 
+@charlie_query: 				(@charlie_screen / @alpha_bodysize)+0em;
+@delta_query:						(@delta_screen / @alpha_bodysize)+0em;
+@echo_query:						(@echo_screen / @alpha_bodysize)+0em;
+@containerwidth: 				(@max_width+(@echo_gutter*2))/@alpha_bodysize+0em;

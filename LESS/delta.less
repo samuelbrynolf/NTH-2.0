@@ -1,0 +1,19 @@
+// Settings
+@import "__settings/_settings.less";
+@import "__settings/mixins.less";
+@import "__settings/variables_calc.less";
+
+@media screen and (min-width: @delta_query) {
+	// Base
+	@import "delta/delta_base.less";
+
+	//Layout
+	@import "delta/delta_layout.less";
+	
+	// Styling
+	@import "delta/delta_styling/delta_typography.less";
+	@import "delta/delta_styling/delta_modules.less";
+	@import "delta/delta_styling/delta_plugins.less";
+	// @import "delta/delta_styling/delta_animations.less";
+	@import "delta/delta_styling/delta_states.less";
+}

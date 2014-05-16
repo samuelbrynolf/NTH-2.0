@@ -1,0 +1,66 @@
+
+// SETTINGS
+// -> Grid and font settings, variables, mixins and useful css-classes
+//==============================================================================================================
+
+// 1.1 	LAYOUT: MEDIAQUERIES BREAKPOINTS + MAXWIDTH
+// 1.2 	LAYOUT: GRID-GUTTERS
+// 2. 	BODY BASE-TYPE + UNIQUE BODY-SIZE WITHIN EACH MEDIAQUERY
+// 3. 	FONTS
+// 4. 	COLORS (http://colorschemedesigner.com/)
+// 5. 	MISC
+
+//==============================================================================================================
+
+// 1.1 -----------------------------------------------------------------------------------------------------------
+
+@beta_screen:					650;  		// 650px		(Use as variable: "@beta_query")
+@charlie_screen:			940; 			// 940px		(Use as variable: "@charlie_query")
+@delta_screen:				1152;			// 1152px		(Use as variable: "@delta_query")
+@echo_screen:					1840;			// 1600px		(Use as variable: "@echo_query")
+@max_width:						1780; 		// 1780px 	(Use as variable: "@containerwidth")
+
+// 1.2 -----------------------------------------------------------------------------------------------------------
+
+@alpha_gutter:				16; 			// 15px 		(Use as variable: "@gutter_alpha" and "@gutter_alpha_half")
+@beta_gutter:					24; 			// 24px 		(Use as variable: "@gutter_beta" and "@gutter_beta_half")
+@charlie_gutter:  		21; 			// 21px 		(Use as variable: "@gutter_charlie" and "@gutter_charlie_half")
+@delta_gutter:  			40; 			// 40px 		(Use as variable: "@gutter_delta" and "@gutter_delta_half")
+@echo_gutter:  				40; 			// 40px 		(Use as variable: "@gutter_echo" and "@gutter_echo_half")
+
+// 2 -----------------------------------------------------------------------------------------------------------
+
+@alpha_bodysize: 			16; 			// 1em = 16px 		(Used in mixin ".bodysize()")
+@body_leading: 				24; 			// 24px 					(Use as variable: "@leading")
+
+// -- 
+
+@beta_bodysize:				18; 			// 1em = 18px
+@charlie_bodysize:		16;				// 1em = 16px
+@delta_bodysize:			18;				// 1em = 18px
+@echo_bodysize:				21;				// 1em = 18px
+
+// 3 -----------------------------------------------------------------------------------------------------------
+
+@serif: 'PT Serif', georgia, serif;
+@sans-serif: sans-serif;
+
+// 4 -----------------------------------------------------------------------------------------------------------
+
+@body: 													rgb(249,244,235);
+@bodycolor: 										#14191a;
+@link: 													rgb(0,166,202);
+@accentsecondary: 							#ff5640;
+
+@bodylighten: 									lighten(@body, 5%);
+@linkdarken:										darken(@link, 20%);
+
+@bodytransparent:								fade(@body, 80);
+@linktransparent:								fade(@link, 98);
+@linkmoretransparent:						fade(@link, 93);
+@accentsecondarytransparent:		fade(@accentsecondary, 25);
+
+// 5 -----------------------------------------------------------------------------------------------------------
+
+@borderheight:									3px;
+@bordercolor:										white;

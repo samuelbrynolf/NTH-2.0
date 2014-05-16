@@ -1,0 +1,176 @@
+// FIND BASIC TYPORULES FOR << BODY, A, FORM-ELEMENTS, UL, OL, EM & STRONG >> IN BASE.LESS
+
+// GLOBAL RULES
+//==============================================================================================================
+
+.t-xlarge,
+.t-large,
+.t-medium,
+.m-pagination-next,
+.nextpostslink,
+.previouspostslink,
+.menu-item a,
+.m-button{
+  -webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-weight: 700;
+
+  	a,
+  	span{
+    	font-weight: inherit;
+  	}
+}
+
+
+
+// FONTS
+//==============================================================================================================
+
+.m-pagination-next,
+.nextpostslink,
+.previouspostslink,
+.menu-item a,
+.m-button,
+.m-the-content h2,
+.m-the-content h3,
+.t-small-title{
+	font-family: @sans-serif;
+}
+
+
+
+// TYPO-CLASSES
+//==============================================================================================================
+
+.t-xlarge {
+	.type-to-em(24,30);
+	font-family: @sans-serif;
+}
+
+.t-large{
+	.type-to-em(21,27);
+	margin-bottom: 0.143em; // 3px
+	font-family: @sans-serif;
+	color: lighten(@bodycolor,6%);
+}
+
+.t-medium{
+	.type-to-em(18,24);
+	font-family: @sans-serif;
+}
+
+.t-small,
+.m-listitem-figure p{
+	.type-to-em(12,18);
+	font-style: italic;
+	
+	a{
+		font-style: italic;
+	}
+}
+
+.t-preamble p{
+	margin: 0.5625em 0 1.125em 0; // 9px & 18px
+	padding-bottom: 1.125em; // 18px
+	border-bottom: @borderheight solid @bordercolor;	
+}
+
+.t-small-title{
+	.type-to-em(14,18);
+	line-height: 1.286;
+	margin-bottom: 1.286em; // 18px
+	font-weight: 700;
+}
+
+
+// CUSTOM TEXTTRANSFORMS
+//==============================================================================================================
+
+.m-pagination-next,
+.nextpostslink,
+.previouspostslink,
+.menu-item a {
+	.type-to-em(12,36);
+	text-transform: uppercase;
+}
+
+
+
+// TYPESETTINGS FOR SPECIFIC MODULES
+//==============================================================================================================
+
+// Headers
+
+.m-global-header .t-small{
+	line-height: 2.8333em;
+}
+
+.m-taxonomy-header .t-small{
+	margin-top: 0.25em;
+}
+
+.m-projectdiary-list .t-small-title{
+	margin: 0;
+	padding: 1.714em 0 1.5em 0;
+}
+
+.m-article-header .t-large span{
+	color: @accentsecondary;
+}
+
+// Listings
+
+.m-listitem .t-medium{
+	padding-top: 1em; // 18px
+	margin-bottom: 0.333em; // 6px
+}
+
+// The content
+
+.m-the-content{
+
+	h3,
+	p,
+	ul,
+	ol,
+	pre{
+		.type-to-em(14,21);
+	}
+
+	h2{
+		margin: @leading 0 @gutter_alpha;
+	}
+	
+	h3{
+		margin-top: 1.7142em; // 24px
+	}
+
+	h2,
+	h3{
+		font-weight: 700;
+	}
+	
+	ul{
+		margin-left: 1.714em;
+		list-style-type: square;
+	}
+	
+	ol{
+		margin-left: 1.714em;
+		list-style-type: decimal-leading-zero;
+	}
+	
+	li+li{
+		margin-top: 0.857em;
+	}
+	
+	p,
+	pre,
+	code,
+	ul,
+	ol{
+		margin-bottom: 1.286em; // 18px
+	}
+}
