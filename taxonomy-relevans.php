@@ -1,9 +1,14 @@
-<?php get_header(); ?>
+<?php get_header(); 
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+$termDiscription = term_description( '', get_query_var( 'taxonomy' ) ); ?>
 	
 	<article id="m-postlist">
 		<header class="l-container m-taxonomy-header">
 				<div class="l-span-A12">
-					<h1 class="t-xlarge"><?php post_type_archive_title(); ?></h1>
+					<h1 class="t-xlarge">Komponent: <?php echo $term->name; ?></h1>
+					<?php if($termDiscription != '') { ?>
+						<p class="t-small"><?php echo $termDiscription; ?> <a href="http://note-to-helf.com/komponenter/" title="Se alla komponenter" rel="nofollow">Se &ouml;vriga komponenter</a></p>
+					<?php } ?>
 				</div>
 			</header>
 		

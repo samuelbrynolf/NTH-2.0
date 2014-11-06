@@ -19,7 +19,7 @@ if (have_posts()) { while (have_posts()) { the_post();?>
 					<?php edit_post_link('Redigera inl&auml;gg ', '', '');
 					//echo 'Publicerad '.get_the_time('l j F, Y').'<br/>';
 					echo 'Publicerad f&ouml;r '.human_time_diff(get_the_time('U'), current_time('timestamp')).' sedan<br/>';
-					the_terms( $post->ID, 'komponent', '', ' + ' ); ?> + <a href="http://note-to-helf.com/komponenter/" title="Se alla komponenter" rel="nofollow">Se alla komponenter</a>
+					the_terms( $post->ID, 'relevans', '', ' + ' ); ?> + <a href="http://note-to-helf.com/komponenter/" title="Se alla komponenter" rel="nofollow">Se alla komponenter</a>
 				</p>
 			</div>
 		</div>
